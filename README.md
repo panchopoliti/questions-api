@@ -32,6 +32,9 @@ npm install -g nodemon && npm start
 ## Node version
 >= 10
 
+## Postgres version
+>= 11
+
 ## Technologies Used
 Knex JS
 Express JS
