@@ -8,6 +8,7 @@ const logger = require('morgan');
 const cors = require('cors');
 
 const indexRouter = require('./routes/index');
+
 const app = express();
 
 const allowedCorsOrigins = ['http://localhost:3000', 'https://panchopoliti.github.io/browser-question-game'];
