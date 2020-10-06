@@ -72,7 +72,6 @@ exports.getQuestionsWithAnswersByDifficulty = (req, res, next) => {
         return acum;
       }, []);
       res.json({ questions: questionsAndAnswers });
-      // res.json({ flatData });
     })
     .catch(next);
 };
