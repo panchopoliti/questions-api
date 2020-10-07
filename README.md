@@ -33,7 +33,7 @@ npm install -g nodemon && npm start
 \>= 10
 
 ## Postgres version
-\>= 11
+\>= 12
 
 ## Technologies Used
 Knex JS
