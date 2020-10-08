@@ -1,6 +1,8 @@
 /* eslint-disable no-param-reassign */
 const createError = require('http-errors');
 const favicon = require('serve-favicon');
+const compression = require('compression');
+const helmet = require('helmet');
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -37,6 +39,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(compression());
+app.use(helmet());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(express.static(path.join(__dirname, '..', 'node_modules')));
 app.use(cors(corsOptions));
