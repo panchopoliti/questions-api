@@ -18,7 +18,8 @@
     "lodash.pick": "^4.4.0",
     "morgan": "~1.9.1",
     "pg": "^7.4.1",
-    "pug": "2.0.0-beta11"
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

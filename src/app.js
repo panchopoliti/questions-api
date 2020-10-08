@@ -1,5 +1,6 @@
 /* eslint-disable no-param-reassign */
 const createError = require('http-errors');
+const favicon = require('serve-favicon');
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -31,6 +32,7 @@ const corsOptions = {
 app.set('views', path.join(__dirname, '..', 'views'));
 app.set('view engine', 'pug');
 
+app.use(favicon(path.join(__dirname, '..', 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
