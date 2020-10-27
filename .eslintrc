@@ -1,15 +1,8 @@
 {
     "extends": "airbnb",
     "rules": {
-        "func-names": [
-        "error",
-        "never"
-        ],
-        "max-len": [
-        2,
-        120,
-        2
-        ]
+        "func-names": ["error", "never"],
+        "max-len": [2, 120, 2]
         // specify the maximum length of a line in your program (off by default)
     }
 }

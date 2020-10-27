@@ -1,16 +1,17 @@
 /* eslint-disable no-param-reassign */
-const createError = require('http-errors');
-const favicon = require('serve-favicon');
-const compression = require('compression');
-const helmet = require('helmet');
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-const cors = require('cors');
 
-const indexRouter = require('./routes/index');
+import createError from 'http-errors';
+import favicon from 'serve-favicon';
+import compression from 'compression';
+import helmet from 'helmet';
+import express from 'express';
+import bodyParser from 'body-parser';
+import path from 'path';
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
+import cors from 'cors';
+
+import indexRouter from './routes/index';
 
 const app = express();
 
@@ -63,4 +64,4 @@ app.use((err, req, res) => {
   res.render('error');
 });
 
-module.exports = app;
+export default app;

@@ -1,13 +1,10 @@
-#!/usr/bin/env node
 /* eslint-disable no-use-before-define */
 
-/**
- * Module dependencies.
- */
+import http from 'http';
+import debugLib from 'debug';
+import app from '../src/app';
 
-const app = require('../src/app');
-const debug = require('debug')('questions-api:server');
-const http = require('http');
+const debug = debugLib('questions-api:server');
 
 /**
  * Normalize a port into a number, string, or false.
