@@ -6,7 +6,7 @@
     "build": "webpack --config webpack.config.js",
     "start": "node ./build/main.js",
     "server": "webpack --watch",
-    "heroku-prebuild": "heroku config:get DATABASE_URL -s  >> .env",
+    "heroku-prebuild": "heroku config:get DATABASE_URL -a question-game-postgres >> .env",
     "heroku-postbuild": "npm run build"
   },
   "dependencies": { 
