@@ -1,5 +1,6 @@
 /* eslint-disable no-param-reassign */
 
+import dotenv from 'dotenv';
 import createError from 'http-errors';
 import favicon from 'serve-favicon';
 import compression from 'compression';
@@ -13,6 +14,7 @@ import cors from 'cors';
 
 import indexRouter from './routes/index';
 
+dotenv.config();
 const app = express();
 
 const allowedCorsOrigins = ['http://localhost:3000', 'https://panchopoliti.github.io/browser-question-game'];

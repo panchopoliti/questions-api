@@ -30,7 +30,7 @@ npm install -g nodemon && npm start
 ```
 
 ## Node version
-\>= 10
+\>= 12
 
 ## Postgres version
 \>= 12
