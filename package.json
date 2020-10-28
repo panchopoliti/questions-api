@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "prebuild": "heroku config:get DATABASE_URL -s  >> .env",
     "build": "webpack --config webpack.config.js",
     "start": "node ./build/main.js",
-    "server": "webpack --watch"
+    "server": "webpack --watch",
+    "heroku-prebuild": "heroku config:get DATABASE_URL -s  >> .env",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": { 
     "body-parser": "~1.18.2",
@@ -41,5 +42,9 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-node-externals": "^2.5.2"
+  },
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
   }
 }
